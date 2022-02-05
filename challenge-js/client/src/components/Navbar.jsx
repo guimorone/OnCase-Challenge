@@ -1,12 +1,16 @@
 import React from 'react';
 
-function handleClick(event) {
-    const [fname, lname, participation] = [event.target[0].value, event.target[1].value, event.target[2].value];
-    // pra não restartar a página
-    event.preventDefault();  
-}
-
 function Navbar() {
+    function handleClick(event) {
+        const data = {
+            firstName: event.target[0].value,
+            lastName: event.target[1].value,
+            participation: event.target[2].value
+        };
+        alert(JSON.stringify(data));
+
+        //event.preventDefault();
+    }
     return (
         <nav className="navbar navbar-light" id="top-form">
             <div className="container-fluid top-bar">

@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
+countId = 5;
+
 // body-parser => using in post methods
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -23,12 +25,20 @@ function validateForm(form) {
 }
 
 app.get('/', (req, res) => {
-  res.send('<h1>Server is running!</h1>');
+  res.send('Sucesso');
 });
 
 app.post('/', (req, res) => {
   if(validateForm(req.body)) {
-    res.send({success: true, message: req.body});
+    countId++;
+    const output = {
+      id: countId,
+      fname: req.body.firstName,
+      lname: req.body.lastName,
+      participation: req.body.participation
+    };
+    console.log(output);
+    res.redirect('/');
   } else {
     res.status(400).json({error: 'ERROR 400 (Bad Request): Not Acceptable, check your request!', request: req.body});
   }
