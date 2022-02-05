@@ -9,7 +9,7 @@ function App() {
         <div>
             <Navbar />
             <Title />
-            <div class="container row chart-table">
+            <div className="container row chart-table">
                 <Table />
                 <Chart />
             </div>

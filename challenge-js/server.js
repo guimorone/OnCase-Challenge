@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
   if(validateForm(req.body)) {
-    res.send(req.body);
+    res.send({success: true, message: req.body});
   } else {
     res.status(400).json({ error: 'ERROR 400 (Bad Request): Not Acceptable, check your request ', request: req.body });
   }

@@ -1,48 +1,49 @@
 import React from 'react';
+import TableBody from './TableBody';
 
 function Table() {
     return (
-        <div class="col">
-            <table class="table table-bordered" id="tabela">
+        <div className="col">
+            <table className="table table-bordered" id="tabela">
                 <thead>
                     <tr>
                     <th scope="col"></th>
                     <th scope="col">First name</th>
                     <th scope="col">Last name</th>
-                    <th scope="col" class="alignCenterText">Participation</th>
+                    <th scope="col" className="alignCenterText">Participation</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row" class="alignCenterText">1</th>
-                        <td>Carlos</td>
-                        <td>Moura</td>
-                        <td class="alignCenterText">5%</td>
-                        </tr>
-                        <tr>
-                        <th scope="row" class="alignCenterText">2</th>
-                        <td>Fernanda</td>
-                        <td>Oliveira</td>
-                        <td class="alignCenterText">15%</td>
-                        </tr>
-                        <tr>
-                        <th scope="row" class="alignCenterText">3</th>
-                        <td>Hugo</td>
-                        <td>Silva</td>
-                        <td class="alignCenterText">20%</td>
-                        </tr>
-                        <tr>
-                        <th scope="row" class="alignCenterText">4</th>
-                        <td>Eliza</td>
-                        <td>Souza</td>
-                        <td class="alignCenterText">20%</td>
-                        </tr>
-                        <tr>
-                        <th scope="row" class="alignCenterText">5</th>
-                        <td>Anderson</td>
-                        <td>Santos</td>
-                        <td class="alignCenterText">40%</td>
-                        </tr>
+                    <TableBody
+                        number="1"
+                        fname="Carlos"
+                        lname="Moura"
+                        participation="5%" 
+                    />
+                    <TableBody
+                        number="2"
+                        fname="Fernanda"
+                        lname="Oliveira"
+                        participation="15%" 
+                    />
+                    <TableBody
+                        number="3"
+                        fname="Hugo"
+                        lname="Silva"
+                        participation="20%" 
+                    />
+                    <TableBody
+                        number="4"
+                        fname="Eliza"
+                        lname="Souza"
+                        participation="20%" 
+                    />
+                    <TableBody
+                        number="5"
+                        fname="Anderson"
+                        lname="Santos"
+                        participation="40%" 
+                    />
                 </tbody>
             </table>
         </div>
