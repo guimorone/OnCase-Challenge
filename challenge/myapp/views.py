@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.contrib import messages
 from myapp.forms import PostMethod
 from django.http import HttpResponseBadRequest, HttpResponse
 import json
