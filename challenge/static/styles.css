@@ -6,13 +6,9 @@ p {
     text-align: center;
 }
 
-/* id */
-#top-form {
-    background-color: aqua;
-}
-#title-subtitle {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+canvas {
+    width: 500px !important;
+    height: 500px !important;
 }
 
 /* class */
@@ -34,4 +30,24 @@ p {
 
 .btn {
     width: 40%;
+}
+
+/* id */
+#top-form {
+    background-color: #00B8E2;
+}
+#title-subtitle {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+#chart {
+    position: relative;
+    left: 60px;
+    bottom: 130px;
+}
+
+#tabela {
+    position: relative;
+    right: 50px;
 }
