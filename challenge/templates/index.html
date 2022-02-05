@@ -14,14 +14,72 @@
     <div id="top-form">
         <nav class="navbar navbar-light">
             <div class="container-fluid top-bar">
-              <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="First name" aria-label="First name">
-                <input class="form-control me-2" type="search" placeholder="Last name" aria-label="Last name">
-                <input class="form-control me-2" type="search" placeholder="Participation" aria-label="Participation">
-                <button class="btn btn-outline-light" type="submit">Send</button>
+              <form method="POST" class="d-flex">
+                {% csrf_token %}
+                <input class="form-control me-2" type="text" placeholder="First name" aria-label="First name">
+                <input class="form-control me-2" type="text" placeholder="Last name" aria-label="Last name">
+                <input class="form-control me-2" type="text" placeholder="Participation" aria-label="Participation">
+                <button class="btn btn-outline-light" type="submit" value="submit">Send</button>
               </form>
             </div>
           </nav>
+    </div>
+
+    <!-- Título e subtítulo -->
+    <div id="title-subtitle">
+        <p class="h1 text-muted">DATA</p>
+        <p class="font-weight-light">Lorem ipsum dolor sit, amet, consectetur adipiscing elit</p>
+    </div>
+
+    <!-- Tabela e Gráfico -->
+    <div class="container row chart-table">
+        <div class="col">
+            <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">First name</th>
+                    <th scope="col">Last name</th>
+                    <th scope="col" class="alignCenterText">Participation</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row" class="alignCenterText">1</th>
+                        <td>Carlos</td>
+                        <td>Moura</td>
+                        <td class="alignCenterText">5%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="alignCenterText">2</th>
+                        <td>Fernanda</td>
+                        <td>Oliveira</td>
+                        <td class="alignCenterText">15%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="alignCenterText">3</th>
+                        <td>Hugo</td>
+                        <td>Silva</td>
+                        <td class="alignCenterText">20%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="alignCenterText">4</th>
+                        <td>Eliza</td>
+                        <td>Souza</td>
+                        <td class="alignCenterText">20%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="alignCenterText">5</th>
+                        <td>Anderson</td>
+                        <td>Santos</td>
+                        <td class="alignCenterText">40%</td>
+                      </tr>
+                </tbody>
+              </table>
+        </div>
+        <div class="col">
+            <h1>Gráfico</h1>
+        </div>
     </div>
 
     <!-- Bootstrap js -->
