@@ -1,5 +1,5 @@
 {% load static %}
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,19 +11,17 @@
 </head>
 <body>
     <!-- Barra do topo -->
-    <div id="top-form">
-        <nav class="navbar navbar-light">
-            <div class="container-fluid top-bar">
-              <form method="POST" class="d-flex">
-                {% csrf_token %}
-                <input class="form-control me-2" type="text" placeholder="First name" aria-label="First name">
-                <input class="form-control me-2" type="text" placeholder="Last name" aria-label="Last name">
-                <input class="form-control me-2" type="text" placeholder="Participation" aria-label="Participation">
-                <button class="btn btn-outline-light" type="submit" value="submit">Send</button>
-              </form>
-            </div>
-          </nav>
-    </div>
+    <nav class="navbar navbar-light" id="top-form">
+        <div class="container-fluid top-bar">
+          <form method="POST" class="d-flex" action=".">
+            {% csrf_token %}
+            <input class="form-control me-2" type="text" placeholder="First name" aria-label="First name" name="firstName">
+            <input class="form-control me-2" type="text" placeholder="Last name" aria-label="Last name" name="lastName">
+            <input class="form-control me-2" type="text" placeholder="Participation" aria-label="Participation" name="participation">
+            <button class="btn btn-outline-light" type="submit" value="submit">Send</button>
+          </form>
+        </div>
+      </nav>
 
     <!-- Título e subtítulo -->
     <div id="title-subtitle">
