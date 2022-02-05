@@ -24,11 +24,11 @@ function validateForm(form) {
   return true;
 }
 
-app.get('/', (req, res) => {
+app.route('/')
+.get((req, res) => {
   res.send('Sucesso');
-});
-
-app.post('/', (req, res) => {
+})
+.post((req, res) => {
   if(validateForm(req.body)) {
     countId++;
     const output = {
@@ -37,8 +37,7 @@ app.post('/', (req, res) => {
       lname: req.body.lastName,
       participation: req.body.participation
     };
-    console.log(output);
-    res.redirect('/');
+    res.status(200).json({messages: output, error: null});
   } else {
     res.status(400).json({error: 'ERROR 400 (Bad Request): Not Acceptable, check your request!', request: req.body});
   }
