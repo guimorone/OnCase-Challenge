@@ -1,6 +1,7 @@
 from django.shortcuts import render
+from django.contrib import messages
 from myapp.forms import PostMethod
-from django.http import HttpResponseBadRequest
+from django.http import HttpResponseBadRequest, HttpResponse
 import json
 
 # Home page
@@ -14,9 +15,11 @@ def index(request):
         form = PostMethod(request.POST)
         if form.is_valid():
             context = {
-                'form': form
+                'fname': form.data['firstName'],
+                'lname': form.data['lastName'],
+                'participation': form.data['participation'],
             }
-            return render(request, 'index.html', context = context)
+            return HttpResponse(json.dumps(context))
         # Inconsistência
         else:
             return HttpResponseBadRequest(json.dumps(form.errors), 

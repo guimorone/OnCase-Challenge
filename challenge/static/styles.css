@@ -6,6 +6,12 @@ p {
     text-align: center;
 }
 
+/* fazer isso deixa as funções de hover do gráfico bugadas */
+/* canvas {
+    width: 500px !important;
+    height: 500px !important;
+} */
+
 /* class */
 .top-bar {
     width: 40%;
@@ -39,7 +45,7 @@ p {
 #chart {
     position: relative;
     left: 60px;
-    bottom: 130px;
+    bottom: 150px;
 }
 
 #tabela {
