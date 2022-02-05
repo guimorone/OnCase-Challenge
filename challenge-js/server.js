@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-// body-parser => post methods
+// body-parser => using in post methods
 app.use(bodyParser.urlencoded({extended: true}));
 
 // checar se tem numero na string do nome e sobrenome
@@ -30,7 +30,7 @@ app.post('/', (req, res) => {
   if(validateForm(req.body)) {
     res.send({success: true, message: req.body});
   } else {
-    res.status(400).json({ error: 'ERROR 400 (Bad Request): Not Acceptable, check your request ', request: req.body });
+    res.status(400).json({error: 'ERROR 400 (Bad Request): Not Acceptable, check your request!', request: req.body});
   }
 });
 

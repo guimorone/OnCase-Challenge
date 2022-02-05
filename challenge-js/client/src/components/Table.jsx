@@ -13,7 +13,7 @@ function Table() {
                     <th scope="col" className="alignCenterText">Participation</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="tableBody">
                     <TableBody
                         number="1"
                         fname="Carlos"
