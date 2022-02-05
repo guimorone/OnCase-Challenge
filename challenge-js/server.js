@@ -1,12 +1,19 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
+
+const corsOptions ={
+  origin:'*', 
+  credentials:true,            //access-control-allow-credentials:true
+  optionSuccessStatus:200,
+}
 
 const app = express();
 
 countId = 5;
 
-// body-parser => using in post methods
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(cors(corsOptions));
 
 // checar se tem numero na string do nome e sobrenome
 function isNumeric(str) {
@@ -26,7 +33,9 @@ function validateForm(form) {
 
 app.route('/')
 .get((req, res) => {
-  res.send('Sucesso');
+  res.status(200).send({
+    message: 'Successful'
+  });
 })
 .post((req, res) => {
   if(validateForm(req.body)) {
