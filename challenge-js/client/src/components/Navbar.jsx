@@ -9,6 +9,7 @@ function Navbar() {
         };
         alert(JSON.stringify(data));
 
+        // Para não restartar a página
         //event.preventDefault();
     }
     return (
