@@ -59,6 +59,12 @@ input[type=number]:focus {
     margin-bottom: 3rem;
 }
 
+#chart {
+    position: relative;
+    left: 50px;
+    bottom: 100px;
+}
+
 #tabela {
     position: relative;
     right: 50px;

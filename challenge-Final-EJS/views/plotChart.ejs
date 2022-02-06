@@ -1,5 +1,5 @@
-<script type="text/javascript" data-informations="<%= informations %>" id="plotChart">
-    const informations = $('#plotChart').attr('data-informations');
+<script type="text/javascript" id="plotChart">
+    const informations = <%- JSON.stringify(informations); %>
     const initialNames = Array.from(informations, x => x.fname + ' ' + x.lname);
     const initialValues = Array.from(informations, x => x.participation);
     //parseFloat => pra sair de percentual para float
@@ -39,7 +39,7 @@
                     position: 'right', // posicionar os labels na direita
                     labels: {
                         font: {
-                            size: 30
+                            size: 20
                         }
                     }
                 }
