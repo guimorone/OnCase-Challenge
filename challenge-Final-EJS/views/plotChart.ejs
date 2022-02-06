@@ -1,14 +1,8 @@
 <script type="text/javascript" data-informations="<%= informations %>" id="plotChart">
-    const plotChart = document.getElementById('plotChart');
-    const informations = plotChart.dataset.informations;
-    const initialNames = [];
-    const initialValues = [];
-
-    for(let i = 0; i < informations.length; i++) {
-        const nome = informations[i].fname + ' ' + informations[i].lname;
-        initialNames.push(nome);
-        initialValues.push(informations[i].participation);
-    }
+    const informations = $('#plotChart').attr('data-informations');
+    const initialNames = Array.from(informations, x => x.fname + ' ' + x.lname);
+    const initialValues = Array.from(informations, x => x.participation);
+    //parseFloat => pra sair de percentual para float
 
     const backgroundColors = [
         '#2D97DE',

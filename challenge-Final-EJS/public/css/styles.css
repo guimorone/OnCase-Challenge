@@ -6,10 +6,10 @@ p {
     text-align: center;
 }
 
-canvas {
+/* canvas {
     width: 400px !important;
     height: 400px !important;
-}
+} */
 
 /* class */
 .top-bar {
@@ -39,12 +39,6 @@ canvas {
 #title-subtitle {
     margin-top: 3rem;
     margin-bottom: 3rem;
-}
-
-#chart {
-    position: relative;
-    left: 60px;
-    bottom: 100px;
 }
 
 #tabela {

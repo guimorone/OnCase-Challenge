@@ -8,14 +8,14 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('public'));
 
-const informations = [{fname: 'Carlos', lname: 'Moura', participation: '5%'}, 
-                    {fname: 'Fernanda', lname: 'Oliveira', participation: '15%'}, 
-                    {fname: 'Hugo', lname: 'Silva', participation: '20%'}, 
-                    {fname: 'Eliza', lname: 'Souza', participation: '20%'}, 
-                    {fname: 'Anderson', lname: 'Santos', participation: '40%'}
+const informations = [{fname: 'Carlos', lname: 'Moura', participation: 5}, 
+                    {fname: 'Fernanda', lname: 'Oliveira', participation: 15}, 
+                    {fname: 'Hugo', lname: 'Silva', participation: 20}, 
+                    {fname: 'Eliza', lname: 'Souza', participation: 20}, 
+                    {fname: 'Anderson', lname: 'Santos', participation: 40}
 ];
 
-// Ver se tem numero nos nomes
+// Ver se tem número nos nomes
 function isNumeric(str) {
     return /\d/.test(str);
 }
@@ -35,7 +35,7 @@ app.route('/')
 .get((req, res) => {
     // ordenar por participação (crescente)
     informations.sort((fst, snd) => {
-        return parseFloat(fst.participation) - parseFloat(snd.participation);
+        return fst.participation - snd.participation;
     });
     res.render('index', {
         informations: informations
@@ -48,6 +48,7 @@ app.route('/')
             lname: req.body.lastName, 
             participation: req.body.participation
         };
+        // Atualizar as informações
         informations.push(value);
         res.redirect('/');
     } else res.status(400).json({error: 'ERROR 400 (Bad Request): Not Acceptable, check your request!', request: req.body});

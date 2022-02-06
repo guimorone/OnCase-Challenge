@@ -14,7 +14,7 @@
                     <th scope="row" class="alignCenterText"> <%= index + 1 %> </th>
                     <td> <%= element.fname %> </td>
                     <td> <%= element.lname %> </td>
-                    <td class="alignCenterText"> <%= element.participation %> </td>
+                    <td class="alignCenterText"> <%= element.participation.toString() + '%' %> </td>
                 </tr>
             <% }); %>
         </tbody>

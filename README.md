@@ -1,7 +1,7 @@
 # OnCase Challenge
 
 Olá!
-Eu dividi o desafio em 3, em todas utilizei a biblioteca BootStrap para o design das páginas.Segue abaixo as resoluções:
+Eu dividi o desafio em 3, em todas utilizei a biblioteca BootStrap para o design das páginas. Segue abaixo as resoluções:
 ### 1 - Challenge
 Aqui eu resolvi com django no backend e utilizei um frontend simples. Utilizei a biblioteca BootStrap para o design das páginas.
 Não possuia nenhum conhecimento de django antes de iniciar esse projeto e consegui aprender coisas novas com isso. Consegui rodar o servidor e enviar e receber mensagens, porém a comunicação back-front ainda não é a ideal, consigo apenas enviar e receber dados, mas sem modificar o html e etc.
