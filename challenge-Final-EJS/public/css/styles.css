@@ -12,11 +12,6 @@ input[type=number]:focus {
     width: 150%;
 }
 
-/* canvas {
-    width: 400px !important;
-    height: 400px !important;
-} */
-
 /* class */
 
 /*  Transição dos inputs quando tiverem clicados (focados) */
@@ -60,6 +55,7 @@ input[type=number]:focus {
     margin-bottom: 3rem;
 }
 
+/* Afastar mais a tabela do gráfico */
 #tabela {
     position: relative;
     right: 50px;

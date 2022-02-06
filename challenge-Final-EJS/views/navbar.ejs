@@ -1,6 +1,8 @@
 <nav class="nav justify-content-center" id="top-form">
   <div class="container-fluid top-bar">
     <form method="POST" class="d-flex">
+      <!-- Required => preenchimento de campo obrigatório
+      ste = any (aceitar qualquer valor decimal, respeitando o min e max) -->
       <input class="form-control me-2 nav-item inputs" type="text" placeholder="First name" aria-label="First name" name="firstName" required/>
       <input class="form-control me-2 nav-item inputs" type="text" placeholder="Last name" aria-label="Last name" name="lastName" required/>
       <input class="form-control me-2 nav-item inputs" type="number" step=any min=0 max=100 placeholder="Participation (only numbers)" aria-label="Participation" name="participation" required/>
