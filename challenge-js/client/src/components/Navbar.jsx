@@ -1,6 +1,7 @@
 import React from 'react';
 
 function Navbar() {
+    // Tentei usar fetch() também, mas não funcionou
     async function handleClick(event) {
         const data = {
             firstName: event.target[0].value,

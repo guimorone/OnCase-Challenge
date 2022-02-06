@@ -1,0 +1,63 @@
+<script type="text/javascript" data-informations="<%= informations %>" id="plotChart">
+    const plotChart = document.getElementById('plotChart');
+    const informations = plotChart.dataset.informations;
+    const initialNames = [];
+    const initialValues = [];
+
+    for(let i = 0; i < informations.length; i++) {
+        const nome = informations[i].fname + ' ' + informations[i].lname;
+        initialNames.push(nome);
+        initialValues.push(informations[i].participation);
+    }
+
+    const backgroundColors = [
+        '#2D97DE',
+        '#15BA9A',
+        '#9C56B9',
+        '#BDC3C7',
+        '#E94A35',
+        '#000000',
+        '#41220A',
+        '#DA588C',
+        '#EBCC0D',
+        '#9F0508',
+        '#005900',
+        '#7BE60F',
+        '#009ECB'
+    ];
+
+    const data = {
+        labels: initialNames,
+        datasets: [{
+            label: 'Participation',
+            data: initialValues,
+            backgroundColor: backgroundColors,
+            hoverOffset: 4
+        }]
+    };
+
+    const config = {
+        type: 'doughnut',
+        data: data,
+        options: {
+            plugins: {
+                legend: {
+                    position: 'right', // posicionar os labels na direita
+                    labels: {
+                        font: {
+                            size: 30
+                        }
+                    }
+                }
+            },
+            title: {
+                display: false,
+            },
+        }
+    };
+
+    const myChart = new Chart(
+        document.getElementById('chart'),
+        config
+    );
+</script>
