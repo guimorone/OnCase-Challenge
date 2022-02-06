@@ -3,7 +3,7 @@
     <form method="POST" class="d-flex">
       <input class="form-control me-2 nav-item inputs" type="text" placeholder="First name" aria-label="First name" name="firstName" required/>
       <input class="form-control me-2 nav-item inputs" type="text" placeholder="Last name" aria-label="Last name" name="lastName" required/>
-      <input class="form-control me-2 nav-item inputs" type="number" step=any max=100 placeholder="Participation (only numbers)" aria-label="Participation" name="participation" required/>
+      <input class="form-control me-2 nav-item inputs" type="number" step=any min=0 max=100 placeholder="Participation (only numbers)" aria-label="Participation" name="participation" required/>
       <button class="btn btn-outline-light nav-item" type="submit" value="submit">Send</button>
     </form>
   </div>

@@ -12,6 +12,7 @@ Assim como a resolução anterior, consegui rodar o servidor e enviar e receber 
 
 ### 3 - Challenge-Final-EJS
 Aqui utilizei das ferramentas que tenho mais conhecimento, como Node e Express pro backend e EJS como ajuda para o frontend.
-Consegui realizar o desafio por completo aqui, recebendo dados com o método POST e modificando tanto a tabela como o gráfico (front). Além disso, eu não sabia se os dados de participação precisavam somar 100%, então não considerei isso (mas botei o valor máximo permitido como 100%),, eu desenvolvi como se as participações não tivessem relação entre si.
+Consegui realizar o desafio por completo aqui, recebendo dados com o método POST e modificando tanto a tabela como o gráfico (front). Além disso, eu não sabia se os dados de participação precisavam somar 100%, então não considerei isso (mas botei o valor máximo permitido como 100%), eu desenvolvi como se as participações não tivessem relação entre si.
 
+## Conclusão
 Ressalto aqui no final que implementei em todas também a parte de retornar erro para inconsistência nos dados recebidos, mas não sabia exatamente que restrições botar. Porém, pelo que eu botei, estava funcionando corretamente.

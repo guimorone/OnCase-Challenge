@@ -1,4 +1,5 @@
 <script type="text/javascript" id="plotChart">
+    // Coletando as informações do backend
     const informations = <%- JSON.stringify(informations); %>
     const initialNames = Array.from(informations, x => x.fname + ' ' + x.lname);
     const initialValues = Array.from(informations, x => x.participation);
@@ -26,7 +27,7 @@
             label: 'Participation',
             data: initialValues,
             backgroundColor: backgroundColors,
-            hoverOffset: 4
+            hoverOffset: 10 // Acentuação no hover de alguma parte do gráfico
         }]
     };
 
@@ -34,6 +35,12 @@
         type: 'doughnut',
         data: data,
         options: {
+            layout: {
+                padding: {
+                    bottom: 200,
+                    left: 50
+                }
+            },
             plugins: {
                 legend: {
                     position: 'right', // posicionar os labels na direita
@@ -42,10 +49,14 @@
                             size: 20
                         }
                     }
+                },
+                title: {
+                    display: true,
+                    text: 'Gráfico de participação',
+                    font: {
+                        size: 30
+                    }
                 }
-            },
-            title: {
-                display: false,
             },
         }
     };

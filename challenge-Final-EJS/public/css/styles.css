@@ -19,6 +19,7 @@ input[type=number]:focus {
 
 /* class */
 
+/*  Transição dos inputs quando tiverem clicados (focados) */
 .inputs {
     -webkit-transition: width .55s ease-in-out;
     transition: width .55s ease-in-out;
@@ -57,12 +58,6 @@ input[type=number]:focus {
 #title-subtitle {
     margin-top: 3rem;
     margin-bottom: 3rem;
-}
-
-#chart {
-    position: relative;
-    left: 50px;
-    bottom: 100px;
 }
 
 #tabela {
