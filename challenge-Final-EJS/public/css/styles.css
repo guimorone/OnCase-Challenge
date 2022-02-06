@@ -1,9 +1,15 @@
 body {
+    /* As vezes ficava com um espaço em branco no topo da tela */
     margin: 0;
 }
 
 p {
     text-align: center;
+}
+
+/* participation */
+input[type=number]:focus {
+    width: 150%;
 }
 
 /* canvas {
@@ -47,6 +53,7 @@ p {
 #top-form {
     background-color: #00B8E2;
 }
+
 #title-subtitle {
     margin-top: 3rem;
     margin-bottom: 3rem;
