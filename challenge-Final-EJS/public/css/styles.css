@@ -12,12 +12,23 @@ p {
 } */
 
 /* class */
+
+.inputs {
+    -webkit-transition: width .55s ease-in-out;
+    transition: width .55s ease-in-out;
+}
+
+.inputs:focus {
+    width: 250%;
+}
+
 .top-bar {
+    /* centralizar o navbar */
     width: 40%;
     padding-top: 40px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     margin: 0 auto;
-}
+} 
 
 .chart-table {
     width: 70%;
